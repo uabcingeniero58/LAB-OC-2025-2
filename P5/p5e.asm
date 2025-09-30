@@ -9,10 +9,10 @@ _start:
 	call puts
 	
 	; Modificar 'z' a 'Z' 
-	mov ebx, msg - 25  ; base ajustada
-	mov edi, 25        ; índice
-	mov byte [ebx + edi], 'Z'
-	
+	mov ebx, msg      ; base
+    mov edi, 24       ; índice (posición de 'y')
+    mov byte [ebx + edi + 1], 'Z'   '
+
 	; Mostrar cadena modificada
 	mov edx, msg
 	call puts

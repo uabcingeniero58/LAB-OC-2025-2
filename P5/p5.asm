@@ -13,5 +13,3 @@ _start:
 
 section	.data
 msg	db  'abcdefghijklmnopqrstuvwxyz0123456789',0xa,0 
-
-
