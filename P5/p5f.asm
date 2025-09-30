@@ -1,4 +1,4 @@
-%include "./LIB/pc_io.inc"
+%include "../LIB/pc_io.inc"
 
 section	.text
 	global _start
