@@ -11,7 +11,7 @@ _start:
 	; Modificar 'z' a 'Z' 
 	mov ebx, msg      ; base
     mov edi, 24       ; índice (posición de 'y')
-    mov byte [ebx + edi + 1], 'Z'   '
+    mov byte [ebx + edi + 1], 'Z'
 
 	; Mostrar cadena modificada
 	mov edx, msg
