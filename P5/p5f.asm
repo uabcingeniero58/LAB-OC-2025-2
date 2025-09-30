@@ -8,6 +8,7 @@ _start:
 	mov edx, msg_original
 	call puts
 	
+	; Modificar 't' a '%' 
 	mov ebx, msg
     mov edi, 4          ; índice (4*4 = 16)
     mov byte [ebx + edi*4 + 3], '%'   ; 16 + 3 = 19 → posición de 't'

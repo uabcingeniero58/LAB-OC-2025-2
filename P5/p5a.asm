@@ -9,7 +9,7 @@ _start:
 	mov edx, msg_original
 	call puts
 
-    ; Modificar primera letra a 'Z' (direccionamiento directo)
+    ; Modificar primera letra a 'Z' 
 	mov byte [msg], 'Z'
 
     ; Mostrar cadena modificada
