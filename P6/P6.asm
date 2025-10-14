@@ -55,7 +55,7 @@ _start:
     mov cl, [FF]
     div cl                ; AL = cociente, AH = residuo
 
-    ; guardar residuo en valor temporal
+    ; guardar residuo en variable temporal
     mov [residuo], ah
 
     ; imprimir cociente
