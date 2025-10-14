@@ -16,7 +16,7 @@ section .text
 _start:
     call clrscr
 
-    ; a) EBX = 0x5C4B2A60 + matricula; imprimir EBX
+    ; a) EBX = 0x5C4B2A60 + matricula
     mov ebx, 0x5C4B2A60
     add ebx, [matricula]
     mov eax, ebx
@@ -24,7 +24,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; b) Push BX ; imprimir BX 
+    ; b) Push BX 
     push bx
     xor eax, eax
     mov ax, bx
@@ -32,7 +32,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; c) N = BL * 8 ; imprimir N 
+    ; c) N = BL * 8 
     xor eax, eax
     mov al, bl
     movzx ax, al
@@ -43,7 +43,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; d) N++ ; imprimir N 
+    ; d) N++ 
     inc word [N]
     mov ax, [N]
     call pHex_w
@@ -92,8 +92,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; g) Pop 16 bits de la pila; imprimir
-    xor eax, eax
+    ; g) Pop 16 bits de la pila
     mov ax, dx
     call pHex_w
     mov edx, nl
