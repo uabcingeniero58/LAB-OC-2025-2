@@ -92,8 +92,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; g) Pop 16 bits de la pila; imprimir 
-    pop dx
+    ; g) Pop 16 bits de la pila; imprimir
     xor eax, eax
     mov ax, dx
     call pHex_w
