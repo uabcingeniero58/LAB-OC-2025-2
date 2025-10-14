@@ -36,8 +36,7 @@ _start:
     xor eax, eax
     mov al, bl
     movzx ax, al
-    mov bh ,8
-    mul ax 
+    shl ax, 3
     mov [N], ax
     mov ax, [N]
     call pHex_w
