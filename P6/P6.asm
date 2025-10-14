@@ -93,6 +93,8 @@ _start:
     call puts
 
     ; g) Pop 16 bits de la pila
+    pop dx
+    xor eax, eax
     mov ax, dx
     call pHex_w
     mov edx, nl
