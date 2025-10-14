@@ -1,4 +1,4 @@
-%include "pc_iox.inc"
+%include "../LIB/pc_iox.inc"
 
 section	.text
 
@@ -25,7 +25,7 @@ _start:                     ;tell linker entry point
 	call putchar
 
 	mov eax,0x76543210 ; presenta en pantalla 76543210
-        call pHex_dw
+    call pHex_dw
 
 	mov al,10       ; cambio de linea
 	call putchar
