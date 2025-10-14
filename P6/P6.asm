@@ -16,7 +16,7 @@ section .text
 _start:
     call clrscr
 
-    ; a) EBX = 0x5C4B2A60 + matricula; imprimir EBX (dword)
+    ; a) EBX = 0x5C4B2A60 + matricula; imprimir EBX
     mov ebx, 0x5C4B2A60
     add ebx, [matricula]
     mov eax, ebx
@@ -50,7 +50,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; e) BX / 0xFF -> AL=cociente, AH=residuo; imprimir ambos (byte)
+    ; e) BX / 0xFF -> AL=cociente, AH=residuo; imprimir ambos
     mov ax, bx
     mov cl, [FF]
     div cl                ; AL = cociente, AH = residuo
