@@ -24,7 +24,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; b) Push BX (16 bits LSB de EBX); imprimir BX (word)
+    ; b) Push BX ; imprimir BX 
     push bx
     xor eax, eax
     mov ax, bx
@@ -32,7 +32,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; c) N = BL * 8 (sin signo); imprimir N (word)
+    ; c) N = BL * 8 ; imprimir N 
     xor eax, eax
     mov al, bl
     movzx ax, al
@@ -43,7 +43,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; d) N++ ; imprimir N (word)
+    ; d) N++ ; imprimir N 
     inc word [N]
     mov ax, [N]
     call pHex_w
@@ -70,7 +70,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; f) N = N + residuo; DEC N; imprimir N (word) y EFLAGS (dword)
+    ; f) N = N + residuo; DEC N; imprimir N y  imprimir EFLAGS 
     mov ax, [N]
     movzx dx, byte [residuo]
     add ax, dx
@@ -92,7 +92,7 @@ _start:
     mov edx, nl
     call puts
 
-    ; g) Pop 16 bits de la pila; imprimir (word)
+    ; g) Pop 16 bits de la pila; imprimir 
     pop dx
     xor eax, eax
     mov ax, dx
