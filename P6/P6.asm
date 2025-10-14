@@ -50,12 +50,12 @@ _start:
     mov edx, nl
     call puts
 
-    ; e) BX / 0xFF -> AL=cociente, AH=residuo; imprimir ambos
+    ; e) BX / 0xFF -> AL=cociente, AH=residuo
     mov ax, bx
     mov cl, [FF]
     div cl                ; AL = cociente, AH = residuo
 
-    ; guardar residuo en memoria
+    ; guardar residuo en valor temporal
     mov [residuo], ah
 
     ; imprimir cociente
