@@ -1,7 +1,7 @@
 ; practica P6 : Instrucciones de transferencia de datos	y aritméticas.
 ; Matricula: 2203421 
 
-%include "LIB/pc_iox.inc"
+%include "../LIB/pc_iox.inc"
 
 section .data
     N          dw 0
