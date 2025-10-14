@@ -5,7 +5,7 @@
 
 section .data
     N          dw 0
-    matricula  dd 0x2203421
+    matricula  dd 0x02203421
     residuo    db 0       
     FF         db 0xFF
     nl         db 10,0
