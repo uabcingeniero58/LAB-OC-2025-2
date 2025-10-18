@@ -34,9 +34,9 @@ _start:
 
     ; c) N = BL * 8 
     xor eax, eax
-    mov al, bl
-    movzx ax, al
-    shl ax, 3
+    mov al, bl          ; AL = BL original
+    mov cl, 8           ; multiplicador = 8
+    mul cl              ; AX = AL * CL 
     mov [N], ax
     mov ax, [N]
     call pHex_w
