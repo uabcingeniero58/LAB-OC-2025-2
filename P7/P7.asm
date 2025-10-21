@@ -17,7 +17,7 @@ _start:
     mov edx, newline
     call puts
 
-; b) CX = 0x3F48  → 0xFA40 (imposible con solo corriemetos ocupa mas instrucciones)
+; b) CX = 0x3F48  → 0xFA40 (imposible con solo corrimientos ocupa mas instrucciones)
     mov cx,0x3F48
     shl cx,4
     movzx eax,cx
