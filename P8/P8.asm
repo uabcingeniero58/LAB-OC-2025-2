@@ -1,5 +1,5 @@
-; P8.asm 
-;instrucciones de control de flujo
+; P8.asm - instrucciones de control de flujo
+; Mario Ernesto Gamez Godoy
 
 %include "../LIB/pc_iox.inc"
 
