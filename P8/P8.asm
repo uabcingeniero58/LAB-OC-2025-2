@@ -23,8 +23,8 @@ section .data
     msg_b_letra db 10, "El caracter capturado es una letra", 10, 0
     msg_b_error db 10, "Error: El caracter no esta en los rangos validos", 10, 0
     
-    msg_c_prompt db 10, "Ingrese cantidad de asteriscos (0-40): ", 0
-    msg_c_error db 10, "Error: Cantidad fuera de rango (0-40)", 10, 0
+    msg_c_prompt db 10, "Ingrese cantidad de asteriscos (0-10): ", 0
+    msg_c_error db 10, "Error: Cantidad fuera de rango (0-10)", 10, 0
     
     msg_d_prompt db 10, "Ingrese 10 caracteres:", 10, 0
     msg_d_mostrar db 10, "Caracteres capturados:", 10, 0
