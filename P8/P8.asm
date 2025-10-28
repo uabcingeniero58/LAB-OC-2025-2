@@ -1,8 +1,10 @@
-; P8.asm
+; P8.asm 
+;instrucciones de control de flujo
 
-%include "./LIB/pc_iox.inc"
+%include "../LIB/pc_iox.inc"
 
 section .data
+    ;menu
     menu_titulo db 10, "=== MENU PRINCIPAL ===", 10, 0
     menu_op1 db "1. Verificar si digito es menor que 5", 10, 0
     menu_op2 db "2. Identificar letra o numero", 10, 0
@@ -93,7 +95,7 @@ salir:
     xor ebx, ebx
     int 0x80
 
-; PROGRAMA A: Verificar si dígito es menor que '5'
+;programa c: Verificar si dígito es menor que '5'
 programa_a:
     push ebp
     mov ebp, esp
@@ -140,7 +142,7 @@ programa_a:
     pop ebp
     ret
 
-; PROGRAMA B: Identificar letra o número
+;programa b: Identificar letra o numero
 programa_b:
     push ebp
     mov ebp, esp
@@ -189,7 +191,7 @@ programa_b:
     pop ebp
     ret
 
-; PROGRAMA C: Imprimir asteriscos
+;programa C: Imprimir asteriscos
 programa_c:
     push ebp
     mov ebp, esp
@@ -268,7 +270,7 @@ programa_c:
     pop ebp
     ret
 
-; PROGRAMA D: Capturar y mostrar 10 caracteres
+;programa D: Capturar y mostrar 10 caracteres en arreglo
 programa_d:
     push ebp
     mov ebp, esp
