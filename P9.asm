@@ -271,13 +271,3 @@ calcular_producto_escalar:
     pop ecx
     pop ebx
     ret
-
-    producto_punto2:
-    mov ah,3
-    mov al,0
-
-    mul ah,3
-    mul al,0
-
-    add ah,al
-    
