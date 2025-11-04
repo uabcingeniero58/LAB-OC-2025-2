@@ -19,10 +19,11 @@ ld -m elf_i386 P9.o -o p9 ../LIB/libpc_iox.a
 ld -m elf_i386 -o P5 p5.o ../LIB/libpc_io.a
 
 
-
 COMANDOS PARA EJECUTAR:
 ----------------------
 ./P9
+
+
 
 RUTINAS :
 -----------------------
