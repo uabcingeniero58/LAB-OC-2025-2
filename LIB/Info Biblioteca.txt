@@ -1,3 +1,9 @@
+COMANDOS PARA INSTALLAR Y ACTUALIZAR:
+------------------------------------
+sudo apt-get install nasm
+sudo apt-get update
+
+
 COMANDOS PARA ENSAMBLAR:
 ------------------------
 nasm -f elf <archivo.asm>
