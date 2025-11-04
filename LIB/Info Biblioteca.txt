@@ -14,9 +14,10 @@ nasm -f elf print_hex.asm
 COMANDOS PARA ENLAZAR:
 ----------------------
 ld -m elf_i386 <archivos.o> -o <output_file>
+ld -m elf_i386 print_hex.o <PATH_de_la_biblioteca> -o print_hex
 ld -m elf_i386 P9.o -o p9 ../LIB/libpc_iox.a
 ld -m elf_i386 -o P5 p5.o ../LIB/libpc_io.a
-ld -m elf_i386 print_hex.o <PATH_de_la_biblioteca> -o print_hex
+
 
 
 COMANDOS PARA EJECUTAR:
