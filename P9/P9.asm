@@ -1,4 +1,4 @@
-%include "./LIB/pc_iox.inc"
+%include "../LIB/pc_iox.inc"
 
 section .data
     N equ 10
