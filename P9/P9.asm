@@ -268,6 +268,4 @@ calcular_producto_escalar:
     pop edi
     pop esi
     pop edx
-    pop ecx
-    pop ebx
-    ret
+    
