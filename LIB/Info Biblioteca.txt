@@ -1,35 +1,91 @@
-Pasos para ensamblar con NASM:
+COMANDOS PARA ENSAMBLAR:
+------------------------
+nasm -f elf <archivo.asm>
+nasm -f elf p5.asm
+nasm -f elf print_hex.asm
 
-Comando para ensamblar: nasm -f elf <archivo.asm>
-Comando para enlazar: ld -m elf_i386 <archivos.o> -o <output_file>
 
-Rutina: clrscr
-Parametros:
-;    Entrada:  ninguno
-;    Salida:   ninguno
+COMANDOS PARA ENLAZAR:
+----------------------
+ld -m elf_i386 <archivos.o> -o <output_file>
+ld -m elf_i386 P9.o -o p9 ../LIB/libpc_iox.a
+ld -m elf_i386 -o P5 p5.o ../LIB/libpc_io.a
+ld -m elf_i386 print_hex.o <PATH_de_la_biblioteca> -o print_hex
 
-Rutina: gotoxy
-Parametros:
-;    Entrada:  BH posicion  x (columna)
-;              BL posicion  y (renglon)
-;    Salida:   ninguno
 
-Rutina: putchar
-Parametros:
-;    Entrada:  AL contiene el caracter a desplegar
-;    Salida:
+COMANDOS PARA EJECUTAR:
+----------------------
+./P9
 
-Rutina: puts
-Parametros:
-;     Entrada:  edx  contiene el aputador a la cadena a imprimir
-;      Salida:  ninguno
+RUTINAS :
+-----------------------
 
-Rutina: getche
-Parametros:
-;    Entrada:
-;    Salida:   AL contiene el caracter tecleado
+clrscr
+; Entrada:  ninguno
+; Salida:   ninguno
+; Limpia la pantalla.
 
-Rutina: getch
-Parametros:
-;    Entrada:
-;    Salida:   AL contiene el caracter tecleado
+gotoxy
+; Entrada:  BH = posición x (columna), BL = posición y (renglón)
+; Salida:   ninguno
+; Mueve el cursor a la posición indicada.
+
+putchar
+; Entrada:  AL contiene el carácter a desplegar
+; Salida:   ninguno
+; Imprime un carácter en pantalla.
+
+puts
+; Entrada:  EDX contiene el apuntador a la cadena a imprimir
+; Salida:   ninguno
+; Imprime una cadena terminada en 0.
+
+getche
+; Entrada:  ninguno
+; Salida:   AL contiene el carácter tecleado
+; Lee un carácter del teclado y lo muestra en pantalla.
+
+getch
+; Entrada:  ninguno
+; Salida:   AL contiene el carácter tecleado
+; Lee un carácter del teclado sin mostrarlo en pantalla.
+
+
+
+rutinas pHex:
+pHex_n
+; Entrada:  AL
+; Salida:   imprime nibble menos significativo en hexadecimal.
+
+pHex_b
+; Entrada:  AL
+; Salida:   imprime byte en hexadecimal.
+
+pHex_w
+; Entrada:  AX
+; Salida:   imprime word en hexadecimal.
+
+pHex_dw
+; Entrada:  EAX
+; Salida:   imprime double word en hexadecimal.
+
+
+
+rutinas pBin:
+pBin_n
+; Entrada:  AL
+; Salida:   imprime nibble menos significativo en binario.
+
+pBin_b
+; Entrada:  AL
+; Salida:   imprime byte en binario.
+
+pBin_w
+; Entrada:  AX
+; Salida:   imprime word en binario.
+
+pBin_dw
+; Entrada:  EAX
+; Salida:   imprime double word en binario.
+; Nota: valores mayores a 4 bits se muestran con '-' cada 4 bits.
+; Ejemplo: 0x3F se muestra como 0011-1111.
