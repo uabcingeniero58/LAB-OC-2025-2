@@ -87,5 +87,7 @@ pBin_w
 pBin_dw
 ; Entrada:  EAX
 ; Salida:   imprime double word en binario.
-; Nota: valores mayores a 4 bits se muestran con '-' cada 4 bits.
+
+
+; Nota de pbin: valores mayores a 4 bits se muestran con '-' cada 4 bits.
 ; Ejemplo: 0x3F se muestra como 0011-1111.
