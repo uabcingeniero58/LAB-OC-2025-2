@@ -1,6 +1,6 @@
 %include "../LIB/pc_iox.inc"
 
-section .dat
+section .data
     N equ 10
 
     msg_titulo db "=== OPERACIONES CON VECTORES ===", 10, 13, 0
