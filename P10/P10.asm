@@ -9,7 +9,8 @@ section .text
    _start:
 
    suma:
-   push ebp,esp
+   push ebp
+   mov ebp,esp
    mov edx,[ebp+8]
    mov eax,[ebp+12]
    add eax,edx
@@ -20,7 +21,8 @@ section .text
  
 
    getbit:
-   push ebp,esp
+   push ebp
+   mov ebp,esp
    mov eax,[ebp+12]
    mov edx,[ebp+8]
    mov ecx,eax
