@@ -20,7 +20,7 @@ section .text
    strlen:
     push epb
     mov ebp,esp
-    jump .dup1
+    jmp .dup1
 
     .dup4:
      mov eax,[ebp+8]
