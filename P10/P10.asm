@@ -41,10 +41,10 @@ section .text
      jne .dup4
      mov eax,0
 
-    .dup3
+     .dup3
      pop ebp
      ret
-
+ 
    getbit:
    push ebp
    mov ebp,esp
