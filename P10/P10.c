@@ -1,8 +1,8 @@
 #include <stdio.h>
 
-extern int suma (int a ,int b)
+extern int suma (int a ,int b);
 extern int strlen(const char* str);
-extern int getbit (int num, int pos);
+extern int getbit(int num, int pos);
 
 int main(){
   int resultado = suma(8, 1)
