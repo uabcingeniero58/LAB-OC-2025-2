@@ -5,7 +5,7 @@ extern int strlen(const char* str);
 extern int getbit(int num, int pos);
 
 int main(){
-  int resultado = suma(8, 1)
+  int resultado = suma(8, 1);
   printf("suma: %d + %d = %d\n",resultado , int a , int b);
 
   const char* texto = "hola UABC";
