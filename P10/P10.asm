@@ -18,7 +18,7 @@ section .text
    ret
 
    strlen:
-    push epb
+    push ebp
     mov ebp,esp
     jmp .dup1
 
@@ -28,7 +28,7 @@ section .text
      mov edx,[ebp+12]
      cmp al,dl
      jne .dup2
-     mov eax,[epb+8]
+     mov eax,[ebp+8]
      jmp .dup3
 
     .dup2:
@@ -42,7 +42,7 @@ section .text
      mov eax,0
 
     .dup3
-     pop epb
+     pop ebp
      ret
 
    getbit:
