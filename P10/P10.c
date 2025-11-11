@@ -1,5 +1,8 @@
 #include <stdio.h>
 
+int a;
+int b;
+
 extern int suma (int a ,int b);
 extern int strlen(const char* str);
 extern int getbit(int num, int pos);
