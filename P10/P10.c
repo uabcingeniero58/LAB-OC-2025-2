@@ -16,5 +16,4 @@ int main(){
   for(int i=0; i<8; i++){
   printf("Bit %d de %d: %d\n", i, numero, getbit(numero, i));
   }
-
 }

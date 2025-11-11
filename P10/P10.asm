@@ -9,4 +9,14 @@ section .text
    _start:
 
    suma:
-   
+   push ebp,esp
+   mov edx,[ebp+8]
+   mov eax,[ebp+12]
+   add eax,edx
+   pop ebp
+   ret
+
+   strlen:
+
+
+   getbit:
