@@ -1,9 +1,11 @@
+bits 32
+
 section .data
     format db "%d", 0    
 
 section .text
-    global pBin8b, pBin16b, pBin32b, pBin64b, start               
-    extern printf, putchar 
+    global pBin8b, pBin16b, pBin32b, pBin64b
+    extern printf, putchar
  
 _start:
  ; funcion 1.
