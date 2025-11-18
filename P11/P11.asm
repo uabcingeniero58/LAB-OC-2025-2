@@ -3,7 +3,7 @@ bits 32
 section .data
     format db "%d", 0    
 
-section .text
+section .tex
     global pBin8b, pBin16b, pBin32b, pBin64b
     extern printf, putchar
  
