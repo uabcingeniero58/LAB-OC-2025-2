@@ -1,4 +1,7 @@
-section .text
+ extern puts
+ extern putchar
+
+ection .text
    global pBin8b
    global pBin16b
    global pBin32b
@@ -56,4 +59,4 @@ section .text
 
    pBin32b:
 
-   pBin64b
+   pBin64b:
