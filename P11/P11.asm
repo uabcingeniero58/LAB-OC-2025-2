@@ -5,51 +5,156 @@ section .text
     global pBin8b, pBin16b, pBin32b, pBin64b                
     extern printf, putchar
 
-   pBin8b:
+  
+; funcion 1.
+pBin8b:
     push ebp
     mov ebp, esp
-    push eax
+    push esi
     push ebx
-    push ecx
     
-    mov ebx, [ebp+8]
-    and ebx, 0xFF
-    mov cx, 8
-    mov edx, 0
-    
-.next:
-    mov al, '0'
-    inc edx
-    cmp edx, 4
-    jne .cont
-    push eax
-    mov al, '-'
-    call putchar
-    pop eax
-    mov edx, 0
-    
-.cont:
-    rol ebx, 1
-    jnc .zero
-    inc al
-    
-.zero:
-    call putchar
-    loop .next
+    mov ebx, 7
+    movzx esi, byte [ebp+8]
+
+.bucle:
+    mov ecx, ebx
+    mov eax, esi
+    sar eax, cl
+    and eax, 1
     
     push eax
-    mov al, 10
-    call putchar
-    pop eax
+    push dword format
+    call printf
+    add esp, 8
     
-    pop ecx
+    dec ebx
+    cmp ebx, -1
+    jne .bucle
+    
+    push dword 10
+    call putchar
+    add esp, 4
+    
     pop ebx
-    pop eax
+    pop esi
+    mov esp, ebp
     pop ebp
     ret
 
-   pBin16b:
+; funcion 2.
+pBin16b:
+    push ebp
+    mov ebp, esp
+    push esi
+    push ebx
+    
+    mov ebx, 15
+    movzx esi, word [ebp+8]
 
-   pBin32b:
+.bucle:
+    mov ecx, ebx
+    mov eax, esi
+    sar eax, cl
+    and eax, 1
+    
+    push eax
+    push dword format
+    call printf
+    add esp, 8
+    
+    dec ebx
+    cmp ebx, -1
+    jne .bucle
+    
+    push dword 10
+    call putchar
+    add esp, 4
+    
+    pop ebx
+    pop esi
+    mov esp, ebp
+    pop ebp
+    ret
 
-   pBin64b:
+; funcion 3.
+pBin32b:
+    push ebp
+    mov ebp, esp
+    push esi
+    push ebx
+    
+    mov ebx, 31
+    mov esi, [ebp+8]
+
+.bucle:
+    mov ecx, ebx
+    mov eax, esi
+    shr eax, cl
+    and eax, 1
+    
+    push eax
+    push dword format
+    call printf
+    add esp, 8
+    
+    dec ebx
+    cmp ebx, -1
+    jne .bucle
+    
+    push dword 10
+    call putchar
+    add esp, 4
+    
+    pop ebx
+    pop esi
+    mov esp, ebp
+    pop ebp
+    ret
+
+; funcion 4.
+pBin64b:
+    push ebp
+    mov ebp, esp
+    push edi
+    push esi
+    push ebx
+    
+    mov esi, [ebp+8]
+    mov edi, [ebp+12]
+    mov ebx, 63
+
+.bucle:
+    mov edx, edi
+    mov ecx, ebx
+    mov eax, esi
+    
+    shrd eax, edx, cl
+    shr edx, cl
+    
+    test cl, 32
+    je .continuar
+    mov eax, edx
+    
+.continuar:
+    and eax, 1
+    
+    push dword 0
+    push eax
+    push dword format
+    call printf
+    add esp, 12
+    
+    dec ebx
+    cmp ebx, -1
+    jne .bucle
+    
+    push dword 10
+    call putchar
+    add esp, 4
+    
+    pop ebx
+    pop esi
+    pop edi
+    mov esp, ebp
+    pop ebp
+    ret
