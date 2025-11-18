@@ -5,7 +5,7 @@
 extern void pBin8b (uint8_t var);
 extern void PBin16b (uint16_t var);
 extern void PBin32b (uint32_t var);
-extern void PBin64b (uint64_t var)
+extern void PBin64b (uint64_t var);
 
 int main(void){
 
