@@ -1,7 +1,7 @@
  extern puts
  extern putchar
 
-ection .text
+section.text
    global pBin8b
    global pBin16b
    global pBin32b
