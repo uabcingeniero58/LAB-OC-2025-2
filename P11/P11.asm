@@ -2,7 +2,7 @@ section .data
     format db "%d", 0    
 
 section .text
-    global pBin8b, pBin16b, pBin32b, pBin64b, _start               
+    global pBin8b, pBin16b, pBin32b, pBin64b, start               
     extern printf, putchar 
  
 _start:
