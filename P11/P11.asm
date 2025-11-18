@@ -4,10 +4,9 @@ section .data
 section .text
     global pBin8b, pBin16b, pBin32b, pBin64b , _start               
     extern printf, putchar 
-
-  
+ 
 _start:
-; funcion 1.
+ ; funcion 1.
 pBin8b:
     push ebp
     mov ebp, esp
