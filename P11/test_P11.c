@@ -19,7 +19,7 @@ printf("\nPrueba de pBin32b con dato aleatorio : \n");
 PBin32b(414666);
 
 printf("\nPrueba de pBin64b con dato aleatorio : \n");
-pBin64b(18446744073709551615ULL);
+PBin64b(44073709551615ULL);
 
 return 0;
 
