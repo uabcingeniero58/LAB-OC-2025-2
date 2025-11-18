@@ -13,10 +13,10 @@ printf("Prueba de pBin8b con dato aleatorio : \n");
 pBin8b(32);
 
 printf("\nPrueba de pBin16b con dato aleatorio : \n");
-pBin16b(4242);
+PBin16b(2048);
 
 printf("\nPrueba de pBin32b con dato aleatorio : \n");
-pBin32b(414666);
+PBin32b(414666);
 
 printf("\nPrueba de pBin64b con dato aleatorio : \n");
 pBin64b(18446744073709551615ULL);
