@@ -7,7 +7,7 @@ extern void pBin16b(uint16_t var);
 extern void pBin32b(uint32_t var);
 extern void pBin64b(uint64_t var);
 
-int main(void){
+int main(void)
 
 printf("Prueba de pBin8b con dato aleatorio : \n");
 pBin8b(32);
