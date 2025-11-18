@@ -1,16 +1,9 @@
- extern puts
- extern putchar
+section .data
+    format db "%d", 0    
 
 section .text
-   global pBin8b
-   global pBin16b
-   global pBin32b
-   global pBin64b
-
-
-   global _start
-
-   _start:
+    global pBin8b, pBin16b, pBin32b, pBin64b                
+    extern printf, putchar
 
    pBin8b:
     push ebp
